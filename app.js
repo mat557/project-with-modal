@@ -26,7 +26,7 @@ const showElement = elements =>{
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
-            <div class="card bg-success card-edit text-white rounded">
+            <div class="card bg-success card-edit  text-white rounded">
                     <img class="rounded image-edit" src="${element.largeImageURL}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">${element.tags}</h5>

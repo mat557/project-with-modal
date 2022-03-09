@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-.left h1{
-    margin-left: 60px;
-    padding-top:50%;
-    font-size: 35px;
-    color: rgb(255, 52, 52);
-}
 
 .that-page{
     width:90%;
@@ -17,6 +11,14 @@
     margin: auto ;
     /* background-color: rgb(255, 127, 127); */
 }
+
+.left h1{
+    margin-left: 60px;
+    padding-top:50%;
+    font-size: 35px;
+    color: rgb(119, 63, 0);
+}
+
 
 .left{
     margin-left: 0;
@@ -26,6 +28,8 @@
     /* background-color: black; */
     position: fixed;
 }
+
+
 
 .btn{
     background-color: rgb(119, 63, 0);
@@ -93,12 +97,12 @@
     border-radius: 10px;
 }
 
-.modal-close{
-    /* position: absolute;
+/* .modal-close{
+    position: absolute;
     top: 10px;
     right: 10px;
-    font-weight: bold; */
-}
+    font-weight: bold;
+} */
 
 .card-edit{
     height: 300px;
@@ -108,5 +112,50 @@
 .image-edit{
     height:170px;
     width:cover;
+}
 
+
+
+@media only screen and (max-width: 414px){
+    body{
+        overflow-x: hidden;
+    }
+    .that-page{
+        width: 410px; 
+        display: flex;
+        flex-direction: column; 
+    }
+    .left{
+        position: relative;
+        height: 100vh;
+    }
+    .right{
+        padding-top: 150px;
+        text-align: center;
+        padding-left:15px;
+        width: 414px;
+    }
+    .modal-bg{
+        max-width: 414px;
+    }
+    .modal{
+        /* float: left; */
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        /* margin-left: 10px; */
+        max-height: 380px;
+        width:350px;
+    }
+    .card-edit{
+        width: 354px;
+        height: 300px;
+    }
+    .card-body{
+        width:360px;
+    }
+
+    #show-field{
+        width: 400px;
+    }
 }
