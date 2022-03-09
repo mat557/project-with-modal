@@ -22,15 +22,15 @@ const showElement = elements =>{
     const divToShow = document.getElementById('show-field');
     divToShow.innerHTML = '';
     for(const element of elements){
-        // console.log(element.userImageURL);
+        console.log(element.user);
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
-            <div class="card bg-success text-white rounded">
-                    <img class="rounded" src="${element.largeImageURL}" class="card-img-top" alt="...">
+            <div class="card bg-success card-edit text-white rounded">
+                    <img class="rounded image-edit" src="${element.largeImageURL}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">${element.tags}</h5>
-                    <button onclick="showModal('${element.userImageURL}')" class="btn text-center" type="button">Show Details</button>
+                    <button onclick="showModal('${element.userImageURL}','${element.user}')" class="btn text-center" type="button">Show Details</button>
                 </div>
             </div>
         `
@@ -39,14 +39,15 @@ const showElement = elements =>{
 }
 
 const modalBg = document.querySelector('.modal-bg');
-const showModal = data =>{
-    console.log(data)
+const showModal = (data1,data2) =>{
+    // console.log(data1)
     const modalBtn = document.querySelector('.modal-btn');
     modalBg.classList.add('bg-active');
     modalBg.innerHTML = `
     <div class="modal">
-        <img src="${data}" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio earum asperiores necessitatibus ducimus quod provident!</p>
+        <img src="${data1}" alt="">
+        <p>User Name</p>
+        <p>${data2}</p>
         <button onclick="closeModal()" class="btn modal-close">Close</button>
     </div>
     

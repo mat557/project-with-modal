@@ -99,3 +99,14 @@
     right: 10px;
     font-weight: bold; */
 }
+
+.card-edit{
+    height: 300px;
+    width: 250px;
+}
+
+.image-edit{
+    height:170px;
+    width:cover;
+
+}
